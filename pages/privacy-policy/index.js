@@ -4,12 +4,16 @@ import { useRouter } from 'next/router'
 
 const PrivacyPolicyPage = (props) => {
   const router = useRouter()
+  let prop = {
+    ...props,
+    ...router,
+  }
   console.log('pid',router)
 
-  return <PrivacyPolicy {...props, router }/>
+  return <PrivacyPolicy {...prop}/>
 }
 
-PrivacyPolicyPage.getInitialProps = (ctx) => ({ query: ctx.query })
+PrivacyPolicyPage.getInitialProps = (ctx) => ({ ctx })
 
 // export async function getStaticPaths() {
   
