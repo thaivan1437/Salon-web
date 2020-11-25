@@ -1,7 +1,12 @@
 import React from 'react'
 import PrivacyPolicy from '../../src/Pages/Information/PrivacyPolicy'
+import { useRouter } from 'next/router'
 
 const PrivacyPolicyPage = (props) => {
+  const router = useRouter()
+  const { pid } = router.query
+  console.log('pid',pid)
+
   return <PrivacyPolicy {...props}/>
 }
 
