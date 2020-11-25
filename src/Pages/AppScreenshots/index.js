@@ -6,6 +6,7 @@ import Title from "../includes/AppScreenshots/Title";
 
 class AppScreenShots extends Component {
     render() {
+        console.log('app-screenshot', this.props)
         return (
             <div>
                 <NavBar bg={true} routeName={this.props.pathname} />

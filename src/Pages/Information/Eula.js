@@ -8,7 +8,7 @@ import Eula from "../includes/Information/Eula";
 class Home extends Component {
     render() {
         return (
-            this.props && this.props.params && this.props.params.headless === "1" ?
+            this.props && this.props.query && this.props.query.headless === "1" ?
                 <div style={{ backgroundColor: "#FFF" }}>
                     <Eula modal={true} />
                 </div>
