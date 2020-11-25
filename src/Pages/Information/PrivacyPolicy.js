@@ -6,6 +6,7 @@ import PrivacyPolicy from "../includes/Information/PrivacyPolicy";
 
 class Home extends Component {
     render() {
+        console.log('this props', this.props)
         return (
             this.props && this.props.query && this.props.query.headless === "1" ?
                 <div style={{ backgroundColor: "#FFF" }}>

@@ -6,7 +6,7 @@ const PrivacyPolicyPage = (props) => {
   const router = useRouter()
   console.log('pid',router)
 
-  return <PrivacyPolicy {...props}/>
+  return <PrivacyPolicy {...props, router }/>
 }
 
 PrivacyPolicyPage.getInitialProps = (ctx) => ({ query: ctx.query })
