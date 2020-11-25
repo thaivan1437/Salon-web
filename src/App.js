@@ -24,6 +24,7 @@ const path = (/#!(\/.*)$/.exec(history.location.hash) || [])[1];
 if (path) {
     history.replace(path);
 }
+
 // if (config.env !== 'local') {
 //   Sentry.init({
 //     dsn: config.SENTRY_URL,

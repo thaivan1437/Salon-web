@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
 import { Image, Container, Row, Col } from "react-bootstrap";
+import Link from 'next/link';
 
 class Title extends Component {
     render() {
+        console.log('this.prop device', this.props)
         return (
             <center>
                 <div className="ana_div">
                     <div className="div">
                         <div className="div2">
                             {
-                                this.props && this.props.params && this.props.params.device === "ipad" ?
+                                this.props && this.props.device === "ipad" ?
                                     <span>iPad App</span>
                                     :
-                                    <a href="/app-screenshots/device/ipad">iPad App</a>
+                                    <Link href="?device=ipad">
+                                        <a>iPad App</a>
+                                    </Link>   
                             }
                         </div>
                         <div className="div2">
                             {
-                                this.props && this.props.params && this.props.params.device === "mobile" ?
+                                this.props && this.props.device === "mobile" ?
                                     <span>Mobile App</span>
                                     :
-                                    <a href="/app-screenshots/device/mobile">Mobile App</a>
+                                    <Link href="?device=mobile">
+                                        <a>Mobile App</a>
+                                    </Link> 
                             }
                         </div>
                     </div>

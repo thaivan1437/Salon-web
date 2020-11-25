@@ -32,13 +32,13 @@ class Eula extends Component {
                                                 <center>
                                                     <Row style={{ marginTop: 100 }}>
                                                         <Col>
-                                                            <a href={`/eula/ios${this.props.modal === true ? "/headless/1" : ""}`}>
+                                                            <a href={`/eula/ios${this.props.modal === true ? "?headless=1&on=web" : ""}`}>
                                                                 <img src={require("../../../static/image/icon_ios.png")} style={{ width: 100 }} />
                                                                 <p className="text-center pt-2 text-style-one" style={{ color: '#000' }}>iOS</p>
                                                             </a>
                                                         </Col>
                                                         <Col>
-                                                        <a href={`/eula/android${this.props.modal === true ? "/headless/1" : ""}`}>
+                                                        <a href={`/eula/android${this.props.modal === true ? "?headless=1&on=web" : ""}`}>
                                                                 <img src={require("../../../static/image/icon_android.png")} style={{ width: 100 }} />
                                                                 <p className="text-center pt-2 text-style-one" style={{ color: '#000' }}>Android</p>
                                                             </a>

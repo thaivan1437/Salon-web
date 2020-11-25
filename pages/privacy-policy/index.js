@@ -1,11 +1,18 @@
 import React from 'react'
 import PrivacyPolicy from '../../src/Pages/Information/PrivacyPolicy'
+import { useRouter } from 'next/router'
 
 const PrivacyPolicyPage = (props) => {
-  return <PrivacyPolicy {...props}/>
+  const router = useRouter()
+  const prop = {
+    ...props,
+    ...router,
+  }
+
+  return <PrivacyPolicy {...prop}/>
 }
 
-PrivacyPolicyPage.getInitialProps = (ctx) => ({ query: ctx.query })
+PrivacyPolicyPage.getInitialProps = (ctx) => ({ ctx })
 
 // export async function getStaticPaths() {
   
