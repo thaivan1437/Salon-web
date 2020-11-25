@@ -1,0 +1,58 @@
+{
+  "name": "salon-manager-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dist:dev": "npm run build",
+    "dist:prod": "npm run build && node inject-gtm.js",
+    "next-dev": "PUBLIC_NEXT_ENV=development && next dev",
+    "next-prod": "PUBLIC_NEXT_ENV=production && next dev",
+    "local": "PUBLIC_NEXT_ENV=local && next dev",
+    "next-build": "PUBLIC_NEXT_ENV=production && next build",
+    "next-start": "PUBLIC_NEXT_ENV=production && next start",
+    "export": "next export"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@sentry/react": "^5.24.2",
+    "@sentry/tracing": "^5.24.2",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-source-maps": "0.0.4-canary.1",
+    "bootstrap": "^4.3.1",
+    "history": "^4.9.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "next": "^10.0.3",
+    "next-images": "^1.6.2",
+    "node-sass": "^4.13.0",
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.0.0-beta.10",
+    "react-dom": "^16.11.0",
+    "react-image-gallery": "^0.9.1",
+    "react-lazy-load-image-component": "^1.4.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "4.0.1"
+  },
+  "devDependencies": {
+    "replace-in-file": "^4.2.0",
+    "webpack-filter-warnings-plugin": "^1.2.1"
+  }
+}

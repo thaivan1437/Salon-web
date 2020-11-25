@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12.x
+    commands:
+      - echo not installing anything else
+      - npm install --silent --no-progress -g npm
+
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install --silent --no-progress
+      - aws --version
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - npm run next-build
+      - npm run export
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: out
