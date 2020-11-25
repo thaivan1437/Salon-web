@@ -9,7 +9,7 @@ class Title extends Component {
                     <div className="div">
                         <div className="div2">
                             {
-                                this.props && this.props.params && this.props.params.device === "ipad" ?
+                                this.props && this.props.query && this.props.query.device === "ipad" ?
                                     <span>iPad App</span>
                                     :
                                     <a href="/app-screenshots/device/ipad">iPad App</a>
@@ -17,7 +17,7 @@ class Title extends Component {
                         </div>
                         <div className="div2">
                             {
-                                this.props && this.props.params && this.props.params.device === "mobile" ?
+                                this.props && this.props.query && this.props.query.device === "mobile" ?
                                     <span>Mobile App</span>
                                     :
                                     <a href="/app-screenshots/device/mobile">Mobile App</a>

@@ -4,11 +4,10 @@ import { useRouter } from 'next/router'
 
 const PrivacyPolicyPage = (props) => {
   const router = useRouter()
-  let prop = {
+  const prop = {
     ...props,
     ...router,
   }
-  console.log('pid',router)
 
   return <PrivacyPolicy {...prop}/>
 }
