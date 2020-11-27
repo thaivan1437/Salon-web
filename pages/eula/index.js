@@ -1,12 +1,16 @@
 import React from 'react'
 import Eula from '../../src/Pages/Information/Eula'
-// import { auth } from '../../src/commons/auth'
+import { useRouter } from 'next/router'
 
-const EulaPage = (props) => (
-  <Eula {...props}/>
-)
 
-EulaPage.getInitialProps = (ctx) => ({ query: ctx.query })
+const EulaPage = (props) => {
+  const router = useRouter()
+  const prop = {
+    ...props,
+    ...router,
+  }
 
+  return <Eula {...prop}/>
+}
 
 export default EulaPage

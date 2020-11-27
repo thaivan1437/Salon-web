@@ -1,12 +1,14 @@
 import React from 'react'
 import TermsOfUse from '../../src/Pages/Information/TermsOfUse'
-// import { auth } from '../../src/commons/auth'
+import { useRouter } from 'next/router'
 
-const TermsOfUsePage = (props) => (
-  <TermsOfUse {...props}/>
-)
-
-TermsOfUsePage.getInitialProps = (ctx) => ({ query: ctx.query })
-
+const TermsOfUsePage = (props) => {
+  const router = useRouter()
+  const prop = {
+    ...props,
+    ...router,
+  }
+  return <TermsOfUse {...prop}/>
+}
 
 export default TermsOfUsePage

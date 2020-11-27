@@ -1,14 +1,14 @@
 import React from 'react'
-import HomePageComponent from '../src/Pages/Home'
+import EulaIOS from '../../src/Pages/Information/EulaIOS'
 import { useRouter } from 'next/router'
 
-const HomePage = (props) => {
+const EulaIOSPage = (props) => {
   const router = useRouter()
   const prop = {
     ...props,
     ...router,
   }
-  return <HomePageComponent {...prop}/>
+  return <EulaIOS {...prop}/>
 }
 
-export default HomePage
+export default EulaIOSPage

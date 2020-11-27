@@ -5,14 +5,14 @@ import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import {config} from '../src/helper/get_config';
 
-// if (config.env !== 'local') {
-//   Sentry.init({
-//     dsn: config.SENTRY_URL,
-//     integrations: [new Integrations.BrowserTracing()],
-//     tracesSampleRate: 1.0,
-//     environment: config.env,
-//   });
-// }
+if (config.env !== 'local') {
+  Sentry.init({
+    dsn: config.SENTRY_URL,
+    integrations: [new Integrations.BrowserTracing()],
+    tracesSampleRate: 1.0,
+    environment: config.env,
+  });
+}
 
 class MyApp extends App {
   render() {

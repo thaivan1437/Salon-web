@@ -24,14 +24,14 @@ const path = (/#!(\/.*)$/.exec(history.location.hash) || [])[1];
 if (path) {
     history.replace(path);
 }
-// if (config.env !== 'local') {
-//   Sentry.init({
-//     dsn: config.SENTRY_URL,
-//     integrations: [new Integrations.BrowserTracing()],
-//     tracesSampleRate: 1.0,
-//     environment: config.env,
-//   });
-// }
+if (config.env !== 'local') {
+  Sentry.init({
+    dsn: config.SENTRY_URL,
+    integrations: [new Integrations.BrowserTracing()],
+    tracesSampleRate: 1.0,
+    environment: config.env,
+  });
+}
 
 class App extends Component {
   render() {
