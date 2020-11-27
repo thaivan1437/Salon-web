@@ -10,22 +10,22 @@ class Title extends Component {
                     <div className="div">
                         <div className="div2">
                             {
-                                this.props && this.props.device === "ipad" ?
+                                this.props && this.props && this.props.device === "ipad" ?
                                     <span>iPad App</span>
                                     :
-                                    <Link href="/app-screenshots?device=ipad">
+                                    <Link href="/app-screenshots/device/ipad">
                                         <a>iPad App</a>
-                                    </Link>   
+                                    </Link>
                             }
                         </div>
                         <div className="div2">
                             {
-                                this.props && this.props.device === "mobile" ?
+                                this.props && this.props && this.props.device === "mobile" ?
                                     <span>Mobile App</span>
                                     :
-                                    <Link href="/app-screenshots?device=mobile">
+                                    <Link href="/app-screenshots/device/mobile">
                                         <a>Mobile App</a>
-                                    </Link> 
+                                    </Link>
                             }
                         </div>
                     </div>

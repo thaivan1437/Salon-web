@@ -43,5 +43,6 @@ module.exports = withImages(withCss(withSourceMaps(withSass({
   publicRuntimeConfig: {
     ...isConfig,
     env: process.env.PUBLIC_NEXT_ENV,
-  }
+  },
+  trailingSlash: true,
 }))))
