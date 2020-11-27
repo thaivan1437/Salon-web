@@ -9,11 +9,11 @@
     "eject": "react-scripts eject",
     "dist:dev": "npm run build",
     "dist:prod": "npm run build && node inject-gtm.js",
-    "next-dev": "PUBLIC_NEXT_ENV=development && next dev",
-    "next-prod": "PUBLIC_NEXT_ENV=production && next dev",
-    "local": "PUBLIC_NEXT_ENV=local && next dev",
-    "next-build": "PUBLIC_NEXT_ENV=production && next build",
-    "next-start": "PUBLIC_NEXT_ENV=production && next start",
+    "next-dev": "PUBLIC_NEXT_ENV=development next dev",
+    "next-prod": "PUBLIC_NEXT_ENV=production next dev",
+    "local": "PUBLIC_NEXT_ENV=local next dev",
+    "next-build": "PUBLIC_NEXT_ENV=production next build",
+    "next-start": "PUBLIC_NEXT_ENV=production next start",
     "export": "next export"
   },
   "eslintConfig": {

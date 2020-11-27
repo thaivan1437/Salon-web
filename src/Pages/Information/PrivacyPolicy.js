@@ -4,11 +4,10 @@ import Footer from '../includes/Footer'
 import PrivacyPolicy from "../includes/Information/PrivacyPolicy";
 
 
-
 class Home extends Component {
     render() {
         return (
-            this.props && this.props.params && this.props.params.headless === "1" ?
+            this.props && this.props.query && this.props.query.headless === "1" ?
                 <div style={{ backgroundColor: "#FFF" }}>
                     <PrivacyPolicy />
                 </div>
