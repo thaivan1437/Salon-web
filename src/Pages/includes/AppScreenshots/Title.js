@@ -13,7 +13,7 @@ class Title extends Component {
                                 this.props && this.props.device === "ipad" ?
                                     <span>iPad App</span>
                                     :
-                                    <Link href="?device=ipad">
+                                    <Link href="/app-screenshots?device=ipad">
                                         <a>iPad App</a>
                                     </Link>   
                             }
@@ -23,7 +23,7 @@ class Title extends Component {
                                 this.props && this.props.device === "mobile" ?
                                     <span>Mobile App</span>
                                     :
-                                    <Link href="?device=mobile">
+                                    <Link href="/app-screenshots?device=mobile">
                                         <a>Mobile App</a>
                                     </Link> 
                             }
