@@ -1,15 +1,12 @@
 import React from 'react'
 import AppScreenshots from '../../src/Pages/AppScreenshots'
-import { useRouter } from 'next/router'
 
-const AppScreenshotsPage = (props) => {
-  const router = useRouter()
-  const prop = {
-    ...props,
-    ...router,
-  }
+const AppScreenshotsPage = (props) => (
+  <AppScreenshots {...props}/>
+)
 
-  return <AppScreenshots {...prop}/>
+AppScreenshotsPage.getInitialProps = (ctx) => {
+  return ({ query: ctx.query, pathname: ctx.pathname, params: ctx.params || {} })
 }
 
 export default AppScreenshotsPage
