@@ -6,7 +6,7 @@ import Help from "../includes/Information/Help";
 class Home extends Component {
     render() {
         return (
-            this.props && this.props.query && this.props.query.headless === "1" ?
+            this.props && this.props.params && this.props.params.headless === "help" ?
                 <div style={{ backgroundColor: "#FFF" }}>
                     <Help />
                 </div>
